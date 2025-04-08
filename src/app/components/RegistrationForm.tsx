@@ -34,7 +34,7 @@ export default function RegistrationForm() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:3001/api/register", {
+    const res = await fetch("https://pbrregback.vercel.app/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),

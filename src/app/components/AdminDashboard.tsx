@@ -22,7 +22,7 @@ export default function AdminPanel() {
 
   const fetchApplications = async () => {
     try {
-      const res = await fetch("http://localhost:3001/api/applications");
+      const res = await fetch("https://pbrregback.vercel.app/api/applications");
       const data = await res.json();
       console.log("Fetched applications:", data); // Add this line
       setApplications(data);
@@ -34,7 +34,7 @@ export default function AdminPanel() {
 
   const updateStatus = async (id: string, status: string) => { // Change id: number to id: string
     try {
-      await fetch(`http://localhost:3001/api/applications/${id}/status`, {
+      await fetch(`https://pbrregback.vercel.app/api/applications/${id}/status`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status }),
