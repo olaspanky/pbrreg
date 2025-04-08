@@ -68,14 +68,15 @@ export default function RegistrationForm() {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <form
-        onSubmit={handleSubmit}
-        className="container w-full p-8 bg-white shadow-lg rounded-lg grid grid-cols-1 md:grid-cols-2 gap-8"
-      >
-        <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 col-span-full">
+    <div className="min-h-screen flex flex-col items-center justify-center py-9">
+       <h1 className="lg:text-3xl text-xl font-bold mb-6 text-center text-gray-800 col-span-full">
           Register Here
         </h1>
+      <form
+        onSubmit={handleSubmit}
+        className="container w-full p-3 lg:p-8 bg-white  shadow-lg rounded-lg lg:grid grid-cols-1 lg:grid-cols-2 gap-8"
+      >
+       
 
         <div className="mb-4">
           <label className="block text-gray-700 font-semibold">Title</label>
@@ -83,7 +84,7 @@ export default function RegistrationForm() {
             type="text"
             value={formData.title}
             onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-            className="border p-3 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border  p-2 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
@@ -94,7 +95,7 @@ export default function RegistrationForm() {
             type="text"
             value={formData.firstName}
             onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-            className="border p-3 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border p-2 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
@@ -105,7 +106,7 @@ export default function RegistrationForm() {
             type="text"
             value={formData.surname}
             onChange={(e) => setFormData({ ...formData, surname: e.target.value })}
-            className="border p-3 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border p-2 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
@@ -116,7 +117,7 @@ export default function RegistrationForm() {
             type="text"
             value={formData.organization}
             onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-            className="border p-3 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border p-2 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
@@ -127,7 +128,7 @@ export default function RegistrationForm() {
             type="text"
             value={formData.jobDesignation}
             onChange={(e) => setFormData({ ...formData, jobDesignation: e.target.value })}
-            className="border p-3 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border p-2 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
@@ -138,7 +139,7 @@ export default function RegistrationForm() {
             type="email"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="border p-3 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border p-2 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
@@ -148,7 +149,7 @@ export default function RegistrationForm() {
           <select
             value={formData.headquarters}
             onChange={(e) => setFormData({ ...formData, headquarters: e.target.value })}
-            className="border p-3 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border p-2 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           >
             <option value="">Select Country</option>
@@ -162,7 +163,7 @@ export default function RegistrationForm() {
           <select
             value={formData.category}
             onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-            className="border p-3 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border p-2 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           >
             <option value="">Select Category</option>
@@ -183,7 +184,7 @@ export default function RegistrationForm() {
           <select
             value={formData.mode}
             onChange={(e) => setFormData({ ...formData, mode: e.target.value })}
-            className="border p-3 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border p-2 w-full rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           >
             <option value="">Select Mode</option>

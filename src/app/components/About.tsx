@@ -49,17 +49,17 @@ export default function Countdown() {
 
   return (
     <div className="w-full flex justify-center items-center bg-[white] ">
-    <div className="bg-white flex flex-col justify-center items-center gap-5 2xl:p-20 ">
+    <div className="bg-white flex flex-col justify-center items-center gap-5 2xl:px-20 ">
         <div className="flex items-center">
-            <h2 className="text-center text-[#008FD0] text-4xl  font-extrabold">About EVENT</h2>
+            <h2 className="text-center text-[#008FD0] text-xl lg:text-4xl  font-extrabold">About EVENT</h2>
         </div>
-    <div className="flex flex-row   justify-center items-center py-4 w-full px-44 gap-12 ">
-        <div className="w-1/2">
-        <div className="flex flex-col gap-7 ">
-            <h2 className="text-2xl text-[#008FD0] font-extrabold">SECURE YOUR PLACE AT THE TABLE</h2>
-            <p>Connect directly with Nigeria’s pharmaceutical leaders and decision-makers at this landmark inaugural summit, where industry pioneers and strategic Investors forge the future of Africa’s most promising healthcare market</p>
+    <div className="flex flex-col-reverse lg:flex-row   justify-center items-center py-4 w-full p-3 lg:px-44 gap-12 ">
+        <div className="lg:w-1/2">
+        <div className="flex flex-col lg:gap-7 gap-3 ">
+            <h2 className="lg:text-2xl text-sm text-[#008FD0] font-extrabold">SECURE YOUR PLACE AT THE TABLE</h2>
+            <p className="text-xs">Connect directly with Nigeria’s pharmaceutical leaders and decision-makers at this landmark inaugural summit, where industry pioneers and strategic Investors forge the future of Africa’s most promising healthcare market</p>
            {/* Event Details */}
-      <div className="space-y-3 mb-6">
+      <div className="space-y-3 mb-6 text-xs lg:text-lg">
         <div className="flex items-center">
           <FaCalendarAlt className="text-gray-400 mr-2" />
           <span>Thursday, 22 May 2025</span>
@@ -75,17 +75,17 @@ export default function Countdown() {
       </div>
 
       {/* Limited Seats Warning */}
-      <p className="text-[#00DDEB] mb-6">
+      <p className="text-[#00DDEB] mb-6 text-xs lg:text-lg">
         LIMITED seats available. Invitations confirmed by April 30<sup>th</sup>, 2025.
       </p>
 
       {/* Read More Button */}
-      <button className="bg-[#76C14C] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#76C14C] transition w-36">
+      <button className="bg-[#76C14C] text-xs lg:text-lg text-white font-semibold lg:py-3 lg:px-6 p-2 rounded-lg hover:bg-[#76C14C] transition w-36">
         Read More
       </button>
         </div>
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
         <Image src={p2} alt="image"/>
         </div>
      

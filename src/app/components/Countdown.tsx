@@ -1,4 +1,4 @@
-"use client"; // If using Next.js with App Router, include this at the top
+"use client"; // For Next.js App Router
 
 import { useState, useEffect } from "react";
 
@@ -11,11 +11,11 @@ export default function Countdown() {
     seconds: 0,
   });
 
-  // Calculate the target date (50 days from now)
+  // Calculate time left until May 22, 2025, 10:00 AM WAT
   const calculateTimeLeft = () => {
     const now = new Date();
-    const targetDate = new Date(now);
-    targetDate.setDate(now.getDate() + 50); // Add 50 days
+    // Set target date to May 22, 2025, 10:00 AM WAT
+    const targetDate = new Date("2025-05-22T10:00:00+01:00"); // +01:00 for WAT
 
     const difference = targetDate.getTime() - now.getTime();
 
@@ -31,7 +31,7 @@ export default function Countdown() {
     };
   };
 
-  // Update the countdown every second
+  // Update countdown every second
   useEffect(() => {
     setTimeLeft(calculateTimeLeft()); // Set initial time
 
@@ -44,37 +44,39 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center items-center bg-[white]">
-    <div className="bg-white flex flex-col justify-center items-center gap-5 p-20 max-w-[1000px]">
+    <div className="w-full flex justify-center items-center bg-white">
+      <div className="bg-white flex flex-col justify-center items-center gap-5 p-20 max-w-[1000px]">
         <div className="flex items-center">
-            <h1 className="text-center text-[#008FD0] text-4xl  font-extrabold">UPCOMING EVENT</h1>
+          <h1 className="text-center text-[#008FD0] text-xl lg:text-4xl font-extrabold">
+            UPCOMING EVENT
+          </h1>
         </div>
-    <div className="flex justify-center py-4 w-full px-44 ">
-      <div className="flex flex-col items-center mx-2 border border-[#008FD0] text-[#008FD0] text-xl w-1/4 font-bold px-6 py-3 rounded-2xl">
-        <div className=" text-xl ">
-          {timeLeft.days.toString().padStart(2, "0")}
-        </div>
-        <div className="text-[#008FD0] mt-5 text-sm">Days</div>
-      </div>
-      <div className="flex flex-col items-center mx-2 border border-[#008FD0] text-[#008FD0] text-xl w-1/4 font-bold px-6 py-3 rounded-2xl">
-        <div className=" text-xl ">
+        <div className="flex justify-center py-4 w-full lg:px-4 sm:px-44">
+          <div className="flex flex-col items-center mx-2 border border-[#008FD0] text-[#008FD0] lg:text-xl w-1/4 font-bold p-2 lg:px-6 lg:py-3 rounded-2xl transition-transform hover:scale-105">
+            <div className="lg:text-xl">
+              {timeLeft.days.toString().padStart(2, "0")}
+            </div>
+            <div className="text-[#008FD0] lg:mt-5 text-sm">Days</div>
+          </div>
+          <div className="flex flex-col items-center mx-2 border border-[#008FD0] text-[#008FD0] lg:text-xl w-1/4 font-bold p-2 lg:px-6 lg:py-3 rounded-2xl transition-transform hover:scale-105">
+          <div className="lg:text-xl">
           {timeLeft.hours.toString().padStart(2, "0")}
-        </div>
-        <div className="text-[#008FD0] mt-5 text-sm">Hours</div>
-      </div>
-      <div className="flex flex-col items-center mx-2 border border-[#008FD0] text-[#008FD0] text-xl w-1/4 font-bold px-6 py-3 rounded-2xl">
-        <div className=" text-xl ">
+            </div>
+            <div className="text-[#008FD0] lg:mt-5  text-sm">Hours</div>
+          </div>
+          <div className="flex flex-col items-center mx-2 border border-[#008FD0] text-[#008FD0] lg:text-xl w-1/4 font-bold p-2 lg:px-6 lg:py-3 rounded-2xl transition-transform hover:scale-105">
+          <div className="lg:text-xl">
           {timeLeft.minutes.toString().padStart(2, "0")}
-        </div>
-        <div className="text-[#008FD0] mt-5 text-sm">Minutes</div>
-      </div>
-      <div className="flex flex-col items-center mx-2 border border-[#008FD0] text-[#008FD0] text-xl w-1/4 font-bold px-6 py-3 rounded-2xl">
-        <div className=" text-xl ">
+            </div>
+            <div className="text-[#008FD0] lg:mt-5  text-sm">Minutes</div>
+          </div>
+          <div className="flex flex-col items-center mx-2 border border-[#008FD0] text-[#008FD0] lg:text-xl w-1/4 font-bold p-2 lg:px-6 lg:py-3 rounded-2xl transition-transform hover:scale-105">
+          <div className="lg:text-xl">
           {timeLeft.seconds.toString().padStart(2, "0")}
+            </div>
+            <div className="text-[#008FD0] lg:mt-5  text-sm">Seconds</div>
+          </div>
         </div>
-        <div className="text-[#008FD0] mt-5 text-sm">Seconds</div>
-      </div>
-      </div>
       </div>
     </div>
   );
