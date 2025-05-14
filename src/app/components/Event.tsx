@@ -40,7 +40,7 @@ export default function EventParticipants() {
   };
 
   return (
-    <div className=" py-12 flex flex-col gap-7 p-3">
+    <div className=" my-12 flex flex-col gap-7 p-3">
       {/* Register Now Link */}
       <div className="lg:text-center pr-8 ">
         <a href="/register" className="text-[#008FD0] lg:text-4xl text-xl font-extrabold">
@@ -51,7 +51,7 @@ export default function EventParticipants() {
       {/* Attendees and Investors Section */}
       <div className=" container mx-auto grid grid-cols-1 md:grid-cols-2 gap-32 px-4 mb-12">
         {/* Attendees */}
-        <div className="bg-white  p-6 rounded-lg shadow-md text-center">
+        <div className="bg-white  p-6 rounded-lg shadow-md text-center lg:w-[80%]">
           <h2 className="lg:text-2xl  text-lg font-bold text-[#1A3C5E] mb-4">ATTENDEES</h2>
           <p className="text-gray-600 mb-4 lg:text-xl  text-sm">
             Forge meaningful connections with leading pharma stakeholders, unlocking unique collaboration and partnership opportunities.
@@ -67,7 +67,7 @@ export default function EventParticipants() {
         </div>
 
         {/* Investors */}
-        <div className="bg-white   p-6 rounded-lg shadow-md text-center">
+        <div className="bg-white   p-6 rounded-lg shadow-md text-center lg:w-[80%]">
           <h2 className="lg:text-2xl  text-lg font-bold text-[#1A3C5E] mb-4">INVESTORS</h2>
           <p className="text-gray-600 mb-4 lg:text-xl  text-sm">
             Identify high-potential ventures shaping Nigeria’s pharma sector, opening doors to impactful and scalable investments.

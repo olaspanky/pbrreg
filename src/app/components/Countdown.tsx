@@ -44,8 +44,8 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center items-center bg-white">
-      <div className="bg-white flex flex-col justify-center items-center gap-5 p-20 max-w-[1000px]">
+    <div className="w-full flex justify-center items-center bg-white my-12 lg:my-20">
+      <div className="bg-white flex flex-col justify-center items-center gap-5 lg:p-20 lg:max-w-[1000px]">
         <div className="flex items-center">
           <h1 className="text-center text-[#008FD0] text-xl lg:text-4xl font-extrabold">
             UPCOMING EVENT

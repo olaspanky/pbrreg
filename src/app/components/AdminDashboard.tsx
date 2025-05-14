@@ -15,6 +15,7 @@ interface Registration {
   email: string;
   status: string;
   createdAt: string;
+  phoneNumber: String, // Added phone number field
 }
 
 export default function AdminPanel() {
@@ -260,6 +261,9 @@ export default function AdminPanel() {
               </div>
               <div>
                 <strong>Email:</strong> {selectedApplication.email}
+              </div>
+              <div>
+                <strong>Phone no:</strong> {selectedApplication.phoneNumber}
               </div>
               <div>
                 <strong>Organization:</strong>{" "}
